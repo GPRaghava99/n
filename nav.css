@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scrolling Text Bar */
+.scrolling-bar {
+    background: #919293;
+    color: rgb(240, 9, 9);
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    direction:ltr;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 1000;
+    font-size: 1em;
+    font-weight: bold;
+    height: 40px; /* Adjust height as needed */
+}
+
+/* Scrolling Text Bar Animation */
+.scrolling-bar p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 20s linear infinite;
+    margin: 0;
+}
+
+@keyframes scroll-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Navbar */
+.navbar {
+    background: #007bff;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 40px; /* Starts where the scrolling bar ends */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 70px; /* Adjust height as needed */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Image */
+.navbar-brand img {
+    height: 60px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+/* Navbar Items */
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+#mainCarousel {
+    padding-top: 20%;
+    height: 85vh; /* Adjust height as needed */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.carousel-inner {
+    height: 120%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+}
+
+/* Additional Spacing Adjustments */
+.container-fluid, .container {
+    padding-top: 7%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Additional Styling to Avoid Space at Bottom */
+.section {
+    padding: 0;
+    margin: 0;
+}
